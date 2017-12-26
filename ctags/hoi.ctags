@@ -1,4 +1,4 @@
 --langdef=hoi
 --langmap=hoi:.txt
---regex-hoi=/^(\s*[a-zA-Z0-9_]+)\s*\=\s*\{\s*$/\1/s,section/{scope=push}
+--regex-hoi=/^\s*(\w+)\s*\=\s*\{\s*$/\1/s,section/{scope=push}
 --regex-hoi=/^\s*\}\s*//{scope=pop}{exclusive}

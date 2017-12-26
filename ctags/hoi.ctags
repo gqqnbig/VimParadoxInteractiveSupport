@@ -1,5 +1,9 @@
 --langdef=hoi
 --langmap=hoi:.txt
+--regex-hoi=/^\s*NOT\s*\=//{exclusive}
+--regex-hoi=/^\s*AND\s*\=//{exclusive}
+--regex-hoi=/^\s*OR\s*\=//{exclusive}
+--regex-hoi=/^\s*if\s*\=//{exclusive}
 
 --regex-hoi=/^\s*(provinces)\s*\=\s*\{\s*$/\1/p,provinces/{scope=push}{exclusive}
 --regex-hoi=/^\s*(\w+)\s*\=\s*\{\s*$/\1/s,section/{scope=push}

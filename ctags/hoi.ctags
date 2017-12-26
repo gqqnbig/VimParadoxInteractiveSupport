@@ -3,9 +3,10 @@
 --regex-hoi=/^[[:digit:]]+\s*\=//{exclusive}
 
 # level 1
---regex-hoi=/^(\w+)\s*\=\s*\{\s*$/\1/s,section/{scope=set}
---regex-hoi=/^\s*id\s*\=\s*([^{]+)\s*$/\1/i,id/{scope=ref}
---regex-hoi=/^}\s*$//{scope=pop}{exclusive}
+--regex-hoi=/^(\w+)\s*\=\s*\{\s*(#.*)?$/\1/s,section/{scope=set}
+--regex-hoi=/^\s*id\s*\=\s*([^{]+)\s*(#.*)?$/\1/i,id/{scope=ref}
+--regex-hoi=/^}\s*(#.*)?$//{scope=pop}{exclusive}
 
 
---regex-hoi=/^\s(trigger)\s*\=\s*\{\s*$/\1/s,section/{scope=ref}
+# level 2
+--regex-hoi=/^\s(trigger)\s*\=\s*\{\s*(#.*)?$/\1/s,section/{scope=ref}

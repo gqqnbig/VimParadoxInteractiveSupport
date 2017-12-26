@@ -2,10 +2,10 @@ if execute(':scriptname') =~ 'tagbar.vim'
 	let g:tagbar_type_hoi = {
 	  \ 'ctagstype': 'hoi',
 	  \ 'kinds': [ 's:section', 
-	  \ 		   'p:provinces:1' ],
+	  \ 		   'i:id' ],
 	  \ 'sort' : 0,
 	  \ 'sro' : '.',
-	  \ 'scope2kind' : { 'section' : 's', 'provinces' : 'p' },
+	  \ 'scope2kind' : { 'section' : 's', 'id' : 'i' },
 	  \ 'deffile' : expand('<sfile>:p:h:h') . '/ctags/hoi.ctags'
 	\}
 else

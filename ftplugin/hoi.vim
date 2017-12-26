@@ -1,7 +1,8 @@
 if execute(':scriptname') =~ 'tagbar.vim' 
 	let g:tagbar_type_hoi = {
 	  \ 'ctagstype': 'hoi',
-	  \ 'kinds': [ 's:section', 'p:provinces' ],
+	  \ 'kinds': [ 's:section', 
+	  \ 		   'p:provinces:1' ],
 	  \ 'sort' : 0,
 	  \ 'sro' : '.',
 	  \ 'scope2kind' : { 'section' : 's', 'provinces' : 'p' },

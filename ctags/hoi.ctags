@@ -5,8 +5,12 @@
 # level 1
 --regex-hoi=/^(\w+)\s*\=\s*\{\s*(#.*)?$/\1/s,section/{scope=set}{exclusive}
 --regex-hoi=/^\s*id\s*\=\s*([^{]+)\s*(#.*)?$/\1/i,id/{scope=ref}{exclusive}
---regex-hoi=/^}\s*(#.*)?$//{scope=pop}{exclusive}
+--regex-hoi=/^}\s*(#.*)?$//{scope=clear}{exclusive}
 
 
 # level 2
---regex-hoi=/^\s(trigger)\s*\=\s*\{\s*(#.*)?$/\1/s,section/{scope=ref}{exclusive}
+--regex-hoi=/^\s(trigger)\s*\=\s*\{\s*(#.*)?$/\1/s,section/{scope=push}{exclusive}
+--regex-hoi=/^\s(option)\s*\=\s*\{\s*(#.*)?$/\1/s,section/{scope=push}{exclusive}
+
+# --regex-hoi=/^\s(\w+)\s*\=\s*\{\s*(#.*)?$//{scope=push}{placeholder}
+--regex-hoi=/^\s}\s*(#.*)?$//{scope=pop}{exclusive}

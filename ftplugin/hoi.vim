@@ -15,4 +15,4 @@ else
 	endif
 endif
 
-
+set cindent

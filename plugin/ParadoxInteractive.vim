@@ -6,3 +6,4 @@ autocmd BufNewFile,BufRead *.hoi4 set ft=hoi
 
 autocmd BufNewFile,BufRead */Stellaris*/gamestate set ft=hoi
 autocmd BufNewFile,BufRead */Stellaris*.txt set ft=hoi
+autocmd BufNewFile,BufRead */Stellaris*.yml set ft=stellarisYaml
